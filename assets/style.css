@@ -1,0 +1,81 @@
+body {
+    font-family: Libre Franklin Light /*Verdana, sans-serif; */
+    margin: 0;
+    background-color: #01295C;
+}
+
+/* Header styling */
+#header-area {
+    background-color: #01295C;
+    height: 140px;
+	margin:0;
+	padding-top:24px;
+}
+
+#header-title {
+    color: #EFE9E5;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#header-description {
+    color: #EFE9E5;
+    margin: 4px auto;
+    text-align: center;
+    max-width: 450px;
+	font-size: 16px;
+}
+
+ /* Menu styling */
+#menu-area {
+    /* display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    padding-left: 7px;
+    padding-right: 5px;
+    margin-left: 15px; */
+    background-color: #B9CFED;
+} 
+
+
+.DateInput_input, .DateInput_input_1{
+    Height: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Date Range colours */
+/* Calendar date start and end */
+.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
+  background: #075AAA;
+  border: 1px double #075AAA;
+  color: #EFE9E5;
+}
+
+/* Calendar in between start and end date */
+.CalendarDay__selected_span {
+    background: #B9CFED;
+    border: 1px double #B9CFED;
+    color: #EFE9E5;
+}
+
+.CalendarDay__selected_span:active, .CalendarDay__selected_span:hover {
+    background: #075AAA;
+    border: 2px double #EB2226;
+    color: #EFE9E5;
+}
+
+/* Graph styling
+#graph-container {
+    margin-right: 10px;
+    max-width: 1220px;
+    width: 1220px;
+}
+
+#filter-date-name, #filter-rating-name, #filter-seat-name, #filter-traveller-name, #filter-verified-name {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+} */
