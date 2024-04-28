@@ -1,14 +1,12 @@
 import pandas as pd
 import plotly.express  as px
 import dash
-from dash import dcc, html, dash_table
-# from dash import html
-import numpy as np
+from dash import dcc, html
 from dash.dependencies import Output, Input
 import dash_bootstrap_components as dbc
 from scripts.sentiments import *
 
-df = pd.read_csv(r'C:\Users\niyai\git\british-analysis\data\British_Airway_Review_cleaned.csv')
+df = pd.read_csv('data\British_Airway_Review_cleaned.csv')
 df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])

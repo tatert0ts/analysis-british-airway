@@ -6,7 +6,7 @@ from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r'C:\Users\niyai\git\british-analysis\data\British_Airway_Review_cleaned.csv')
+df = pd.read_csv('data\British_Airway_Review_cleaned.csv')
 
 stop_words = set(STOPWORDS)
 stop_words.update(['ba', 'flight', 'flights', 'british', 'airway', 'airways'])
