@@ -1,9 +1,7 @@
 import pandas as pd
 import plotly.express as px
-from wordcloud import WordCloud, STOPWORDS
+from wordcloud import STOPWORDS
 import string
-from textblob import TextBlob
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('data\British_Airway_Review_cleaned.csv')
@@ -30,28 +28,29 @@ df_yes = pd.DataFrame(df[df['recommended'] == 'Yes']['cleaned_reviews'])
 df_no = pd.DataFrame(df[df['recommended'] == 'No']['cleaned_reviews'])
 
 df_concatenated = pd.concat([extractwords(df_yes), extractwords(df_no)], keys=['Yes', 'No'])
-df_concatenated['Reccomended'] = df_concatenated.index.get_level_values(0)
+df_concatenated['Recommended'] = df_concatenated.index.get_level_values(0)
 df_concatenated = df_concatenated.reset_index(drop=True) # remove keys
 
 topwords = extractwords(df).head(50).Word 
 df_topwords = df_concatenated[df_concatenated['Word'].isin(topwords.values)]
 
 # Plot the treemap
-fig_wr = px.treemap(df_topwords, path=['Word', 'Reccomended']
-                 , values='Frequency', title='Most Frequent Words')
-fig_wr.update_layout(title_x = 0.5, 
-                  margin = dict(l = 50, r = 40, t = 50, b = 30)
-                  )
+# fig_wr = px.treemap(df_topwords, path=['Word', 'Recommended'],
+#                  values='Frequency', 
+#                   title='Most Frequent Words')
+# fig_wr.update_layout(title_x = 0.5, 
+#                   margin = dict(l = 50, r = 40, t = 50, b = 30)
+#                   )
 
 # Plot the treemap
-fig_rw = px.treemap(df_topwords, path=['Reccomended','Word']
-                 , values='Frequency', title='Most Frequent Words',
-                 color = 'Reccomended',
+fig_rw = px.treemap(df_topwords, path=['Recommended','Word'],
+                 values = 'Frequency', 
+                 title='Most Frequent Words',
+                 color = 'Recommended',
                  color_discrete_map={'No':'red', 'Yes':'green'})
 fig_rw.update_layout(title_x = 0.5, 
                   margin = dict(l = 50, r = 40, t = 50, b = 30)
                   )
-
 
 # word cloud
 # fig_wc = WordCloud(background_color='white',max_words=100,max_font_size=300,width=1600,height=800, stopwords=stop_words)
