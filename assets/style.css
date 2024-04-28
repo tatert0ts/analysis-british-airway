@@ -1,5 +1,5 @@
 body {
-    font-family: Libre Franklin Light /*Verdana, sans-serif; */
+    font-family: Libre Franklin Light;
     margin: 0;
     background-color: #01295C;
 }
@@ -30,15 +30,8 @@ body {
 
  /* Menu styling */
 #menu-area {
-    /* display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 10px;
-    padding-left: 7px;
-    padding-right: 5px;
-    margin-left: 15px; */
     background-color: #B9CFED;
 } 
-
 
 .DateInput_input, .DateInput_input_1{
     Height: 20px;
@@ -46,7 +39,6 @@ body {
     text-align: center;
 }
 
-/* Date Range colours */
 /* Calendar date start and end */
 .CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
   background: #075AAA;
@@ -67,15 +59,8 @@ body {
     color: #EFE9E5;
 }
 
-/* Graph styling
-#graph-container {
-    margin-right: 10px;
-    max-width: 1220px;
-    width: 1220px;
-}
-
-#filter-date-name, #filter-rating-name, #filter-seat-name, #filter-traveller-name, #filter-verified-name {
+#filter-date-name, #filter-rating-name, #filter-seat-name, #filter-traveller-name, #filter-verified-name, #filter-recc-name {
     font-weight: bold;
     font-size: 16px;
     text-align: center;
-} */
+}
